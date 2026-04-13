@@ -5,8 +5,8 @@
 # Migrate existing project → add Docker → run
 #
 # Usage:
-#   migrate-project clone <stack> <git-url>
-#   migrate-project local <stack> <path>
+#   migrate-project clone <stack> <git-url> [folder-name]
+#   migrate-project local <stack> <path> [folder-name]
 # ============================================
 
 RED='\033[0;31m'
@@ -39,10 +39,12 @@ show_help() {
   echo ""
   echo -e "${YELLOW}Examples:${NC}"
   echo "  migrate-project clone laravel git@github.com:user/repo.git"
+  echo "  migrate-project clone laravel git@github.com:user/repo.git my-custom-name"
   echo "  migrate-project clone codeigniter git@github.com:user/repo.git"
   echo "  migrate-project clone fastapi-react git@github.com:user/backend.git"
   echo ""
   echo "  migrate-project local laravel ~/Downloads/my-old-project"
+  echo "  migrate-project local laravel ~/Downloads/my-old-project my-custom-name"
   echo "  migrate-project local codeigniter ~/Desktop/ci-project"
 }
 
@@ -218,6 +220,7 @@ fastapi_react_setup() {
 MODE=$1
 STACK=$2
 SOURCE=$3
+CUSTOM_NAME=$4
 
 if [ -z "$MODE" ] || [ -z "$STACK" ] || [ -z "$SOURCE" ]; then
   show_help
@@ -234,8 +237,12 @@ case $STACK in
     ;;
 esac
 
-# Ambil nama project
-PROJECT_NAME=$(get_project_name "$SOURCE")
+# Ambil nama project — pakai custom name jika ada
+if [ -n "$CUSTOM_NAME" ]; then
+  PROJECT_NAME="$CUSTOM_NAME"
+else
+  PROJECT_NAME=$(get_project_name "$SOURCE")
+fi
 DEST=$(get_dest_path "$STACK" "$PROJECT_NAME")
 
 echo -e "${BLUE}"
@@ -326,9 +333,9 @@ case $STACK in
   fastapi-react) fastapi_react_setup "$DEST" ;;
 esac
 
-# ── Open in Cursor ───────────────────────────
-echo -e "\n${CYAN}🖥️  Opening in Cursor...${NC}"
-cursor "$DEST"
+# ── Open in Antigravity ──────────────────────
+echo -e "\n${CYAN}🖥️  Opening in Antigravity...${NC}"
+antigravity "$DEST"
 
 echo ""
 echo -e "${GREEN}╔══════════════════════════════════════════════════════╗${NC}"

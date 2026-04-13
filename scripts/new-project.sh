@@ -192,9 +192,9 @@ case $STACK in
     ;;
 esac
 
-# Buka di Cursor
-echo -e "\n${CYAN}🖥️  Opening in Cursor...${NC}"
-cursor "$DEST"
+# Buka di Antigravity
+echo -e "\n${CYAN}🖥️  Opening in Antigravity...${NC}"
+antigravity "$DEST"
 
 echo ""
 echo -e "${GREEN}╔══════════════════════════════════════════════════════╗${NC}"
