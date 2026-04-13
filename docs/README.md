@@ -15,7 +15,7 @@
 | [04-stacks/javascript.md](04-stacks/javascript.md) | React, Vue, Next.js, Nuxt.js, Svelte, Angular, Node.js |
 | [04-stacks/golang.md](04-stacks/golang.md) | Golang |
 | [05-fullstack.md](05-fullstack.md) | Gabungkan frontend + backend, CORS, API connection |
-| [06-ai-tools.md](06-ai-tools.md) | Claude Code CLI, Cursor, agent_config workflows |
+| [06-ai-tools.md](06-ai-tools.md) | Claude Code CLI, Cursor, Antigravity, agent_config workflows |
 | [07-reference.md](07-reference.md) | Ports, aliases, cheatsheet semua perintah |
 
 ---
@@ -81,6 +81,7 @@ docs             # cd ~/Developer/tools/docs
 # ── AI Tools ──────────────────────────────
 claude           # Buka Claude Code CLI
 cursor .         # Buka project di Cursor
+antigravity .    # Buka project di Google Antigravity
 ```
 
 ---
@@ -96,7 +97,8 @@ cursor .         # Buka project di Cursor
 | Node.js | 24.14.1 | JavaScript runtime |
 | nvm | 0.40.4 | Node version manager |
 | Claude Code | 2.1.86 | AI coding assistant CLI |
-| Cursor | 2.6.22 | AI-powered code editor |
+| Cursor | 2.6.22 | AI-powered code editor (opsi A) |
+| Google Antigravity | public preview | Agent-first IDE dari Google (opsi B) |
 | TablePlus | 6.8.6 | Database GUI |
 | Oh My Zsh | latest | Terminal enhancement |
 
@@ -113,8 +115,9 @@ cd ~/Developer/projects/standalone/php/nama-project
 # 2. Start Docker
 dcu
 
-# 3. Buka editor
-cursor .
+# 3. Buka editor (pilih salah satu)
+cursor .         # Cursor
+antigravity .    # Google Antigravity
 
 # 4. Coding dengan AI
 claude   # Claude Code CLI untuk analisis & debug

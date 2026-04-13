@@ -14,8 +14,8 @@
     └── AI di Terminal — analisis seluruh project
         Slash commands dari workflows/
 
-    Layer 3 — Cursor (Editor AI)
-    └── AI di dalam editor — autocomplete, inline edit, chat
+    Layer 3 — Cursor / Antigravity (Editor AI)
+    └── AI di dalam editor — autocomplete, inline edit, agent
 
 ---
 
@@ -139,9 +139,15 @@ Workflow coding dengan Claude Code:
 
 ---
 
+## Code Editor
+
+Pilih salah satu editor — keduanya berbasis VS Code, AI built-in.
+
+---
+
 ## Cursor
 
-AI-powered code editor — VS Code dengan AI built-in.
+AI-powered code editor — VS Code fork dengan Claude Pro via extension.
 
 ### Info
 
@@ -192,6 +198,65 @@ Composer (Cmd Shift I):
 
 ---
 
+## Google Antigravity
+
+Agent-first IDE dari Google — AI model Gemini, Claude, dan GPT tersedia built-in, gratis.
+
+### Info
+
+    Developer  : Google
+    Model      : Gemini 3.1 Pro, Claude Sonnet/Opus 4.6, GPT-OSS-120B
+    Plan       : Gratis untuk individual (public preview)
+    Basis      : VS Code fork
+
+### Tampilan
+
+Antigravity punya 2 view berbeda:
+- Editor view  → tampilan IDE biasa (seperti VS Code / Cursor)
+- Manager view → orkestrasi banyak AI agent secara paralel (Cmd E untuk toggle)
+
+### Shortcuts
+
+    Cmd I          → AI inline command — ketik instruksi langsung
+    Cmd L          → Toggle agent panel
+    Cmd E          → Toggle editor ↔ agent manager view
+    Tab            → Terima AI autocomplete suggestion
+    Esc            → Tolak AI suggestion
+    Cmd P          → Quick file open
+    Cmd Shift P    → Command palette
+    Ctrl backtick  → Toggle terminal
+    Cmd B          → Toggle sidebar
+    Cmd /          → Toggle comment
+    Cmd D          → Select next occurrence
+
+Semua shortcut VS Code standar bekerja tanpa konfigurasi tambahan.
+
+### Cara Pakai AI di Antigravity
+
+Inline Command (Cmd I):
+1. Highlight kode yang mau diubah (atau tidak perlu highlight)
+2. Tekan Cmd I
+3. Ketik instruksi dalam bahasa natural
+4. AI langsung ubah kode
+5. Accept atau Reject hasilnya
+
+Agent Panel (Cmd L):
+1. Tekan Cmd L untuk buka panel agent
+2. Ketik task atau pertanyaan
+3. Agent AI bisa referensi file dan jalankan aksi di project
+
+Agent Manager (Cmd E):
+1. Tekan Cmd E untuk masuk Manager view
+2. Buat dan jalankan banyak agent secara paralel
+3. Cocok untuk task besar yang bisa dibagi-bagi
+
+### Buka Project di Antigravity
+
+    antigravity .                    # Buka folder aktif (jika CLI tersedia)
+    antigravity ~/path/to/project    # Buka folder tertentu
+
+---
+
 ## Workflow Developer + AI Sehari-hari
 
 ### Mulai Kerja
@@ -202,8 +267,9 @@ Composer (Cmd Shift I):
     # 2. Start Docker
     dcu
 
-    # 3. Buka editor
-    cursor .
+    # 3. Buka editor (pilih salah satu)
+    cursor .        # Cursor
+    antigravity .   # Google Antigravity
 
     # 4. Buka Claude Code untuk analisis/planning
     claude
@@ -220,6 +286,8 @@ Composer (Cmd Shift I):
     # - Generate boilerplate code
     # - Tambah validasi
     # - Refactor fungsi
+
+    # Di Antigravity, pakai Cmd I untuk hal yang sama
 
 ### Debug
 

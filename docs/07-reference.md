@@ -257,7 +257,9 @@ Ganti port di file .env project — ubah NGINX_PORT atau DB_PORT.
 
 ---
 
-## Cursor Shortcuts
+## Editor Shortcuts
+
+### Cursor
 
     Cmd K          → AI inline edit
     Cmd L          → AI chat sidebar
@@ -271,6 +273,20 @@ Ganti port di file .env project — ubah NGINX_PORT atau DB_PORT.
     Cmd /          → Toggle comment
     Cmd D          → Select next occurrence
     Cmd Shift L    → Select all occurrences
+
+### Google Antigravity
+
+    Cmd I          → AI inline command
+    Cmd L          → Toggle agent panel
+    Cmd E          → Toggle editor ↔ agent manager view
+    Tab            → Terima AI suggestion
+    Esc            → Tolak AI suggestion
+    Cmd P          → Quick file open
+    Cmd Shift P    → Command palette
+    Ctrl backtick  → Toggle terminal
+    Cmd B          → Toggle sidebar
+    Cmd /          → Toggle comment
+    Cmd D          → Select next occurrence
 
 ---
 

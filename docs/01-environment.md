@@ -155,9 +155,13 @@ Lihat 06-ai-tools.md untuk cara penggunaan lengkap.
 
 ---
 
-## 8. Cursor (Code Editor)
+## 8. Code Editor (Cursor atau Antigravity)
 
-VS Code dengan AI built-in — Claude Pro terintegrasi langsung di editor.
+Pilih salah satu — keduanya berbasis VS Code dengan AI built-in.
+
+### Opsi A: Cursor
+
+VS Code fork dengan AI built-in — Claude Pro terintegrasi via extension.
 
     brew install --cask cursor
     cursor .    # Buka folder aktif di Cursor
@@ -172,6 +176,28 @@ Shortcuts penting:
 - Cmd L         → AI chat sidebar
 - Cmd Shift I   → AI Composer (edit banyak file)
 - Tab           → Terima AI suggestion
+
+### Opsi B: Google Antigravity
+
+Agent-first IDE dari Google — AI model Gemini + Claude tersedia built-in, gratis.
+
+    # Download dari: antigravity.google
+    # Atau via terminal (jika CLI tersedia setelah install):
+    antigravity .    # Buka folder aktif
+
+Setup setelah install:
+1. Login dengan akun Google
+2. Pilih AI model (Gemini 3.1 Pro, Claude Sonnet/Opus, atau GPT-OSS-120B)
+3. Claude Code extension (by Anthropic) juga bisa diinstall karena berbasis VS Code
+
+Shortcuts penting:
+- Cmd I         → AI inline command
+- Cmd L         → Toggle agent panel
+- Cmd E         → Toggle editor ↔ agent manager view
+- Tab           → Terima AI suggestion
+
+CATATAN: Antigravity punya 2 tampilan — Editor view (seperti VS Code biasa) dan
+Manager view (orkestrasi banyak agent AI sekaligus secara paralel).
 
 Lihat 06-ai-tools.md untuk workflow lengkap.
 
